@@ -1,0 +1,36 @@
+
+:root { --primary: #019dd5; --bg: #f8fafc; --card: #ffffff; --text: #0b3b58; }
+
+body.dark { --bg: #0f172a; --card: #1e293b; --text: #f1f5f9; }
+
+body { background: var(--bg); color: var(--text); font-family: sans-serif; transition: 0.3s; margin: 0; }
+
+.navbar { display: flex; justify-content: space-between; padding: 20px 5%; background: var(--card); }
+
+.hero { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 40px 20px; }
+
+.search-wrap { display: flex; justify-content: center; align-items: center; gap: 10px; margin-bottom: 15px; width: 100%; }
+
+input { padding: 12px 20px; border-radius: 25px; border: 1px solid #ddd; width: 300px; outline: none; }
+
+button { padding: 10px 20px; border-radius: 20px; border: none; background: var(--primary); color: #fff; cursor: pointer; font-weight: bold; }
+
+button.secondary { background: #64748b; }
+
+.hist-pill { background: #e2e8f0; color: #475569; padding: 5px 12px; margin: 5px; font-size: 0.75rem; border-radius: 15px; border: none; cursor: pointer; }
+
+.grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; padding: 20px 5%; }
+
+.card { background: var(--card); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+.card img { width: 100%; height: 300px; object-fit: cover; }
+
+@keyframes loading { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+
+.skeleton .skel-img { height: 300px; background: #e2e8f0; position: relative; overflow: hidden; }
+
+.skeleton .skel-img::after {
+    content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    animation: loading 1.5s infinite;
+}

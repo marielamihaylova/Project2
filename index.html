@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Explorer Pro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">TV<span>EXPLORER</span></div>
+        <div class="nav-controls">
+            <button id="showFavsBtn">❤️ Favorites</button>
+            <button id="themeToggle">🌓 Theme</button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h2>Discovery Awaits</h2>
+        <div class="search-wrap">
+            <input type="text" id="userInput" placeholder="Type a show...">
+            <button id="fetchBtn">Search</button>
+            <button id="clearBtn" class="secondary">Clear</button>
+        </div>
+      
+        <div id="historyPanel" class="history-container"></div>
+        <p id="status">Ready.</p>
+    </header>
+
+
+    <main id="display" class="grid-container"></main>
+
+    <script src="app.js"></script>
+</body>
+</html>
